@@ -1,0 +1,121 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.guideme.guideme"
+    android:installLocation="preferExternal">
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.authentication.LogInActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.authentication.SignUpActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.authentication.TermsAndConditionsActivity"
+            android:label="Terms and Conditions"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.trips_listing.TripsActivity"
+            android:label="Explore Trips"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.trip_creation.TripCreationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.AppBarOverlay" />
+
+        <activity
+            android:name=".ui.trip_creation.TripOverviewActivity"
+            android:label="Trip Overview"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.trip_creation.RestaurantsActivity"
+            android:label="Restaurants"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.trip_creation.HotelsActivity"
+            android:label="Hotels"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.tour_guide.AvailableTourGuidesActivity"
+            android:label="Available Tour Guides"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.tour_guide.TourGuideProfileActivity"
+            android:label="Tour Guide Profile"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.tour_guide.TourGuidesFilterActivity"
+            android:label="Filter Tour Guides"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.dashboard.FavoritePlacesActivity"
+            android:label="Favorite Places"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.dashboard.CommonPhrasesActivity"
+            android:label="Common Phrases"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.dashboard.BookRideActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.dashboard.EmergencyNumbersActivity"
+            android:label="Emergency Numbers"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.home.NotificationsActivity"
+            android:label="Notifications"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>
